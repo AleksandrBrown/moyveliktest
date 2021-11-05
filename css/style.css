@@ -14639,7 +14639,7 @@ body {
   font-weight: 300;
 }
 
-.workinfo-block button {
+.workinfo-block a {
   position: relative;
   top: -30px;
   cursor: pointer;
@@ -14649,9 +14649,10 @@ body {
   outline: none;
 }
 
-.workinfo-block button:hover {
+.workinfo-block a:hover {
   color: #fff;
   background: #2f3640;
+  text-decoration: none;
 }
 
 .choosemodel {
@@ -14677,12 +14678,16 @@ body {
 
 .choosemodel .cards-block {
   margin: 0 0;
-  padding: 0 15%;
+  padding: 0 14%;
 }
 
 .choosemodel .cards-block .uk-card {
-  width: 300px;
-  height: 350px;
+  width: 380px;
+  height: 455px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
 }
 
 .choosemodel .cards-block .uk-card .ye-label {
@@ -14691,6 +14696,8 @@ body {
   background-repeat: no-repeat;
   background-position: 95% 50%;
   border-radius: 20px;
+  top: 10px;
+  left: -85px;
 }
 
 .choosemodel .cards-block .uk-card .ye-label img {
@@ -14723,6 +14730,7 @@ body {
 .choosemodel .cards-block .uk-card .img-block {
   width: 271px;
   height: 183px;
+  margin: 0 auto;
 }
 
 .choosemodel .cards-block .uk-card .img-block img {
@@ -14735,6 +14743,7 @@ body {
   cursor: pointer;
   width: 72px;
   height: 72px;
+  top: 20px;
   right: 60px;
   border-radius: 300px;
   -webkit-box-shadow: 2px 2px 6px 0px rgba(47, 54, 64, 0.4);
@@ -14753,17 +14762,32 @@ body {
   line-height: 1.2;
   font-weight: 600;
   text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .choosemodel .cards-block .uk-card .subtitle {
   color: #000000;
-  font-size: 20px;
+  font-size: 18px;
   font-family: 'FuturaPT',Arial,sans-serif;
-  line-height: 1.05;
-  font-weight: 100;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
 }
 
 .choosemodel .cards-block .uk-card .price-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  position: relative;
+  top: 10px;
+}
+
+.choosemodel .cards-block .uk-card .price-block .left-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14771,67 +14795,92 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 10rem;
-  height: 70px;
-  margin: 0 auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
 }
 
-.choosemodel .cards-block .uk-card .price-block .left-block .top-price {
-  position: relative;
-  top: 10px;
+.choosemodel .cards-block .uk-card .price-block .left-block .top-block .title,
+.choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .title {
   color: #000000;
-  font-size: 23px;
-  font-family: 'FuturaPT',Arial,sans-serif;
+  font-size: 10px;
+  font-family: 'Montserrat',Arial,sans-serif;
   line-height: 1.55;
-  font-weight: 700;
+  font-weight: 600;
+  padding: 0;
+  max-width: 100%;
+  padding-bottom: 10px;
 }
 
-.choosemodel .cards-block .uk-card .price-block .left-block .top-price-tw {
-  top: 18px;
-}
-
-.choosemodel .cards-block .uk-card .price-block .left-block .bottom-price {
-  color: #000000;
-  font-size: 23px;
-  font-family: 'FuturaPT',Arial,sans-serif;
-  line-height: 1.55;
-  font-weight: 700;
-  opacity: 0.5;
-  bottom: 5px;
+.choosemodel .cards-block .uk-card .price-block .left-block .top-block .subtitle,
+.choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .subtitle {
   position: relative;
-}
-
-.choosemodel .cards-block .uk-card .price-block .right-block {
-  position: relative;
-  left: 10px;
+  top: -7px;
   color: #000000;
-  font-size: 22px;
-  font-family: 'FuturaPT',Arial,sans-serif;
+  font-size: 14px;
+  font-family: 'Montserrat',Arial,sans-serif;
   line-height: 1.55;
   font-weight: 400;
 }
 
-.choosemodel .cards-block .uk-card .price-block .sell-cost::before {
+.choosemodel .cards-block .uk-card .price-block .left-block .bottom-block {
   position: relative;
-  top: 20px;
-  content: ' ';
+  top: -5px;
+}
+
+.choosemodel .cards-block .uk-card .price-block .right-block {
+  position: relative;
+}
+
+.choosemodel .cards-block .uk-card .price-block .right-block a {
+  position: absolute;
+  bottom: -5px;
+  right: 20px;
+  -webkit-transform: translateY(-70%);
+      -ms-transform: translateY(-70%);
+          transform: translateY(-70%);
   display: block;
-  width: 80px;
-  height: 5px;
-  background: rgba(84, 84, 84, 0.7);
-  -webkit-transform: rotate(15deg);
-      -ms-transform: rotate(15deg);
-          transform: rotate(15deg);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.choosemodel .cards-block .uk-card .price-block .price-window {
+  position: absolute;
+  z-index: 20;
+  background-color: #ffffff;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.3);
+  width: 210px;
+  color: #000000;
+  font-size: 11px;
+  font-family: 'Montserrat',Arial,sans-serif;
+  line-height: 1.15;
+  font-weight: 400;
+  padding: 20px;
+  right: 5px;
+  bottom: 80px;
 }
 
 .choosemodel .cards-block .uk-card .bonus {
+  position: relative;
+  top: 10px;
   text-align: center;
+}
+
+.choosemodel .cards-block .uk-card .btn-block {
+  position: relative;
+  top: 15px;
 }
 
 .choosemodel .cards-block .uk-card .btn-block a {
   margin: 10px auto 0;
-  width: 270px;
-  height: 45px;
+  width: 200px;
+  height: 55px;
 }
 
 .choosemodel .cards-block .uk-card .btn-block a:hover {
@@ -14873,6 +14922,11 @@ body {
 .choosemodel .cards-block .uk-card .btns-block button:hover {
   background-color: #121212;
   color: #ffffff;
+}
+
+.choosemodel .cards-block .s-card {
+  width: 384px;
+  height: 456px;
 }
 
 .subbenefit-block {
@@ -15001,14 +15055,18 @@ body {
   top: 5rem;
 }
 
+.phone-block .yellow-block {
+  height: 180px;
+}
+
 .phone-block .yellow-block img {
   position: relative;
-  top: 15rem;
+  top: 2rem;
 }
 
 .phone-block .yellow-block .yellow-border {
   position: relative;
-  bottom: -20rem;
+  bottom: -4rem;
   width: 450px;
   height: 450px;
   border-width: 10px;
@@ -16416,17 +16474,17 @@ body {
 }
 
 .left-modal-arrow {
-  top: 8rem;
+  top: 18rem;
   left: -10rem;
 }
 
 .right-modal-arrow {
-  top: 8rem;
+  top: 18rem;
   right: -10rem;
 }
 
 .modal-slider {
-  height: 400px;
+  height: 600px;
 }
 
 .charact-1 {
@@ -16687,6 +16745,336 @@ body {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+#choose-device {
+  padding: 40px 45px;
+}
+
+#choose-device .uk-modal-body .form-title {
+  font-size: 36px;
+  line-height: 1.23;
+  font-family: 'FuturaPT',Arial,sans-serif;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#choose-device .uk-modal-body form .name-field {
+  color: #000000;
+  border: 1px solid #c9c9c9;
+  width: 470px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 auto 25px;
+}
+
+#choose-device .uk-modal-body form .name-field input {
+  height: 60px;
+  font-size: 20px;
+  margin: 0 20px;
+  line-height: 1.33;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .tel-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: #000000;
+  border: 1px solid #c9c9c9;
+  margin: 0 auto 25px;
+  width: 470px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+#choose-device .uk-modal-body form .tel-field input {
+  position: relative;
+  left: 18px;
+  height: 59px;
+  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.33;
+  width: 70%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .choosen-country {
+  height: 60px;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .choosen-country .choosen-country-flag-img {
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 20px;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .choosen-country .choosen-country-arrow-img {
+  position: relative;
+  top: 25%;
+  left: 25%;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list {
+  position: absolute;
+  width: 420px;
+  height: 212px;
+  overflow-y: scroll;
+  background: #fff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #eee;
+  border-radius: 7px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 30;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul {
+  padding: 0;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul .country-list-point {
+  list-style-type: none;
+  z-index: 40;
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #000 !important;
+  padding: 5px 0;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul .country-list-point:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul .country-list-point .country-name {
+  position: absolute;
+  left: 10%;
+  z-index: 10;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul .country-list-point .country-code {
+  position: absolute;
+  right: 20%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#choose-device .uk-modal-body form .tel-field .select-country .country-list .country-list-ul .country-list-point img {
+  position: relative;
+  width: 20px;
+  left: 85%;
+}
+
+#choose-device .uk-modal-body form .tel-field .label-4-tel {
+  position: relative;
+  top: 30%;
+  left: 14px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#choose-device .uk-modal-body form .choosedevice-field-title {
+  font-family: 'FuturaPT',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.55;
+  width: 30%;
+  position: relative;
+  left: 35px;
+}
+
+#choose-device .uk-modal-body form .choosedevice-field .select-block {
+  color: #000000;
+  border: 1px solid #c9c9c9;
+  width: 470px;
+  height: 60px;
+  margin: 0 auto 25px;
+  border-radius: 10px;
+}
+
+#choose-device .uk-modal-body form .choosedevice-field .select-block select {
+  height: 60px;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 1.33;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .choosedevice-field .select-block select option {
+  padding: 5px 0;
+  color: #000;
+}
+
+#choose-device .uk-modal-body form .promocode-field-title {
+  font-family: 'FuturaPT',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.55;
+  width: 60%;
+  position: relative;
+  left: 35px;
+}
+
+#choose-device .uk-modal-body form .promocode-field .input-block {
+  border: 1px solid #c9c9c9;
+  width: 470px;
+  height: 60px;
+  margin: 0 auto 25px;
+  border-radius: 10px;
+}
+
+#choose-device .uk-modal-body form .promocode-field .input-block input {
+  height: 60px;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 1.33;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .deliveryoption-field-title {
+  font-family: 'FuturaPT',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.55;
+  width: 60%;
+  position: relative;
+  left: 35px;
+}
+
+#choose-device .uk-modal-body form .deliveryoption-field .select-block {
+  color: #000000;
+  border: 1px solid #c9c9c9;
+  width: 470px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 auto 25px;
+}
+
+#choose-device .uk-modal-body form .deliveryoption-field .select-block select {
+  height: 60px;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 1.33;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .contact-field-title {
+  font-family: 'FuturaPT',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.55;
+  width: 60%;
+  position: relative;
+  left: 35px;
+}
+
+#choose-device .uk-modal-body form .contact-field .select-block {
+  color: #000000;
+  border: 1px solid #c9c9c9;
+  width: 470px;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0 auto 25px;
+}
+
+#choose-device .uk-modal-body form .contact-field .select-block select {
+  height: 60px;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 1.33;
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+#choose-device .uk-modal-body form .submit button {
+  cursor: pointer;
+  display: block;
+  width: 470px;
+  height: 54px;
+  color: #000000;
+  background-color: #f9e70d;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 0 auto 25px;
+}
+
+#choose-device .uk-modal-body form .policy-subtext-field {
+  font-family: 'Montserrat',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  max-width: 93%;
+  margin: 0 auto;
+}
+
+#choose-device .uk-modal-body form .policy-subtext-field a {
+  color: #ff8562;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  text-decoration: none;
+}
+
+#def-modal-window {
+  padding: 0;
+}
+
+#def-modal-window .uk-modal-body {
+  width: 100%;
+  height: 254px;
+}
+
+#def-modal-window .uk-modal-body .container {
+  font-size: 20px;
+  line-height: 1.55;
+  font-family: 'Montserrat',Arial,sans-serif;
+  font-weight: 300;
+  color: #000;
+  position: relative;
+  left: 30%;
+}
+
+#def-modal-window .uk-modal-body .container ul li {
+  max-width: 35%;
+  margin: 10px 0;
+}
+
+#def-modal-window .uk-modal-body .container a {
+  text-decoration: underline;
 }
 
 @media (min-width: 640px) {
@@ -18263,6 +18651,21 @@ body {
     font-size: 37px;
   }
 
+  .choosemodel .cards-block .uk-card {
+    width: 459px;
+    height: 430px;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .top-block .subtitle,
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .subtitle {
+    font-size: 16px;
+  }
+
+  .choosemodel .cards-block .s-card {
+    width: 459px;
+    height: 485px;
+  }
+
   .smallbanner-block .main-block .right-block .middle .block {
     width: 684px;
     height: 124px;
@@ -18400,6 +18803,61 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+
+  #choose-device .uk-modal-body form {
+    position: relative;
+    left: -10px;
+  }
+
+  #choose-device .uk-modal-body form .name-field {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .tel-field {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .choosedevice-field-title {
+    width: 100%;
+    left: 10px;
+  }
+
+  #choose-device .uk-modal-body form .choosedevice-field .select-block {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .promocode-field-title {
+    width: 100%;
+    left: 10px;
+  }
+
+  #choose-device .uk-modal-body form .promocode-field .input-block {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .deliveryoption-field-title {
+    width: 100%;
+    left: 10px;
+  }
+
+  #choose-device .uk-modal-body form .deliveryoption-field .select-block {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .contact-field-title {
+    width: 100%;
+    left: 10px;
+  }
+
+  #choose-device .uk-modal-body form .contact-field .select-block {
+    width: 335px;
+    height: 50px;
+  }
 }
 
 @media (max-width: 959px) {
@@ -18532,7 +18990,7 @@ body {
     top: 20px;
   }
 
-  .workinfo-block button {
+  .workinfo-block a {
     top: 10px;
   }
 
@@ -18554,8 +19012,56 @@ body {
     padding: 0;
   }
 
-  .choosemodel .cards-block .uk-card .img-block {
-    margin: 0 auto;
+  .choosemodel .cards-block .uk-card {
+    width: 623px;
+    height: 329px;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block {
+    position: relative;
+    top: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .top-block .title,
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .title {
+    text-align: center;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .top-block .subtitle,
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .subtitle {
+    text-align: center;
+    top: 0;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block {
+    top: 0;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .right-block a {
+    top: 0;
+    right: 20px;
+    left: auto;
+  }
+
+  .choosemodel .cards-block .s-card {
+    width: 623px;
+    height: 362px;
   }
 
   .choosemodel .s-cards-block {
@@ -19086,6 +19592,18 @@ body {
     margin-left: 10px;
   }
 
+  .left-modal-arrow {
+    top: 8rem;
+  }
+
+  .right-modal-arrow {
+    top: 8rem;
+  }
+
+  .modal-slider {
+    height: 400px;
+  }
+
   .charact-1 {
     width: 616px;
     height: 557px;
@@ -19094,6 +19612,48 @@ body {
   .charact-1 {
     width: 616px;
     height: 557px;
+  }
+
+  #choose-device {
+    padding: 0;
+  }
+
+  #choose-device .uk-modal-body {
+    width: 100%;
+  }
+
+  #choose-device .uk-modal-body form .name-field input {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .tel-field input {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .choosedevice-field .select-block select {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .promocode-field .input-block input {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .deliveryoption-field .select-block select {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .contact-field .select-block select {
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .submit button {
+    width: 335px;
+    height: 50px;
+  }
+
+  #choose-device .uk-modal-body form .policy-subtext-field {
+    font-size: 12px;
+    line-height: 1.45;
   }
 }
 
@@ -19297,6 +19857,26 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 90%;
+  }
+
+  .choosemodel .cards-block .uk-card {
+    width: 456px;
+    height: 501px;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .top-block .title,
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .title {
+    font-size: 12px;
+  }
+
+  .choosemodel .cards-block .uk-card .price-block .left-block .top-block .subtitle,
+  .choosemodel .cards-block .uk-card .price-block .left-block .bottom-block .subtitle {
+    font-size: 14px;
+  }
+
+  .choosemodel .cards-block .s-card {
+    width: 456px;
+    height: 481px;
   }
 
   .smallbanner-block .main-block {
@@ -19631,10 +20211,6 @@ body {
             flex-direction: row;
   }
 
-  .choosemodel .cards-block .uk-card .price-block .sell-cost::before {
-    left: 5rem;
-  }
-
   .phone-block {
     height: 800px;
   }
@@ -19727,6 +20303,16 @@ body {
   .special-offer .uk-container .text-block .subtitle {
     font-size: 19px;
     line-height: 1.2;
+  }
+
+  .choosemodel .cards-block .uk-card {
+    width: 308px;
+    height: 503px;
+  }
+
+  .choosemodel .cards-block .s-card {
+    width: 308px;
+    height: 503px;
   }
 
   .smallbanner-block .main-block {

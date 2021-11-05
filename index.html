@@ -16,11 +16,11 @@
         <div class="menu-block uk-flex uk-flex-column">
             <div class="logo"><img src="./assets/icons/logo/main-logo.svg" alt=""></div>
             <ul class="uk-nav">
-                <li><a href="#">О СЕРВИСЕ</a></li>
-                <li><a href="#">ПРЕИМУЩЕСТВА</a></li>
-                <li><a href="#">НАШИ ТРЕНАЖЕРЫ</a></li>
-                <li><a href="#">ВОПРОС-ОТВЕТ</a></li>
-                <li><a href="#">КОНТАКТЫ</a></li>
+                <li><a href="#workinfo-block">О СЕРВИСЕ</a></li>
+                <li><a href="#subinfo-block">ПРЕИМУЩЕСТВА</a></li>
+                <li><a href="#choosemodel">НАШИ ВЕЛИКИ</a></li>
+                <li><a href="#questions-block">ВОПРОС-ОТВЕТ</a></li>
+                <li><a href="#testdrive-block">КОНТАКТЫ</a></li>
             </ul>
             <div class="links">
                 <a class="mail" href="mailto:info@moydevice.ru">info@moydevice.ru</a>
@@ -28,8 +28,8 @@
                 <a href="https://api.whatsapp.com/send/?phone=79858078734&text&app_absent=0" class="whatss">WhatsApp</a>
             </div>
             <div class="btn-block">
-                <a class="uk-flex uk-flex-middle uk-flex-center uk-text-uppercase" href="#">Оформить подписку</a>
-                <a class="uk-flex uk-flex-middle uk-flex-center uk-text-uppercase" href="#">Личный кабинет</a>
+                <a class="uk-flex uk-flex-middle uk-flex-center uk-text-uppercase" href="#choosemodel">Оформить подписку</a>
+                <a class="uk-flex uk-flex-middle uk-flex-center uk-text-uppercase" href="https://lk.moydevice.ru/?city=1023&device=1031&roistat_visit=609447&_ga=2.144842868.118716519.1635935251-1203618248.1635707043">Личный кабинет</a>
             </div>
         </div>
     </div>
@@ -37,7 +37,7 @@
 
         <div class="topmob-block">
     <div class="uk-container">
-        <img src="./assets/icons/logo/velik-mob-logo.svg" alt="" class="img-block">
+        <img src="../assets/icons/logo/velik-mob-logo.svg" alt="" class="img-block">
     </div>
 </div>
         <div class="start-block">
@@ -56,8 +56,8 @@
                 </div>
                 <div class="subtitle uk-margin-top">Оформи аренду от <strong><span class="ye-color">2 900 ₽</span></strong> в месяц и получи велосипед.<br> <span class="subtitle-subtext"><strong>Доставим бесплатно</strong> до двери. Без залогов.</span> </div>
                 <div class="links-block uk-flex uk-flex-row">
-                    <a href="#" class="btn uk-flex uk-flex-middle uk-flex-center uk-margin-top">ПОЛУЧИТЬ ТРЕНАЖЕР</a>
-                    <a href="#" class="sublink">Для курьеров и Бизнеса</a>
+                    <a href="#choosemodel" class="btn uk-flex uk-flex-middle uk-flex-center uk-margin-top">ПОЛУЧИТЬ ВЕЛОСИПЕД</a>
+                    <a href="#forcourier-block" class="sublink">Для курьеров и Бизнеса</a>
                 </div>
             </div>
         </div>
@@ -76,7 +76,7 @@
         </div>
     </div>
 </div>
-        <div class="workinfo-block uk-section">
+        <div class="workinfo-block uk-section" id="workinfo-block">
     <div class="uk-container">
         <img class="uk-margin-auto uk-display-block" src="./assets/icons/icon/workinfo/arrow_png.png" alt="arrow icon">
     </div>
@@ -99,7 +99,7 @@
         <div class="uk-card uk-width-1-4@m uk-width-2-3 flex-row-m margin-auto-m">
             <div class="uk-flex uk-flex-row flex-col-m">
                 <div class="uk-width-1-2@m uk-width-4-5">
-                    <img src="./assets/icons/icon/workinfo/2.png" alt="">
+                    <img src="../assets/icons/icon/workinfo/2.png" alt="">
                 </div>
                 <div><img class="arrow-position" width="40" height="20" src="./assets/icons/icon/workinfo/arrow.svg" alt=""></div>
             </div>
@@ -134,11 +134,11 @@
     </div>
     <div class="uk-container-small uk-margin-auto uk-margin-large-top uk-width-4-5">
         <div class="uk-flex uk-flex-center">
-            <button class="btn uk-border-pill uk-margin-auto uk-text-uppercase">получить велосипед</button>
+            <a href="#choosemodel" class="btn uk-flex uk-flex-center uk-flex-middle">получить велосипед</a>
         </div>
     </div>
 </div>
-        <div class="choosemodel">
+        <div class="choosemodel" id="choosemodel">
     <div class="uk-container">
         <div class="uk-flex uk-flex-column">
             <div class="choosemodel-title choosemodel-title-first uk-text-center">Модели велосипедов</div>
@@ -150,16 +150,33 @@
                     <div class="subtitle">Forward SPORTING 29L или аналог</div>
                     <div class="price-block">
                         <div class="left-block">
-                            <div class="top-price">2 900 ₽</div>
-                            <div class="bottom-price sell-cost">3 600 ₽</div>
+                            <div class="top-block">
+                                <div class="title">Аренда на 1 месяц</div>
+                                <div class="subtitle"><span class="uk-text-bold">2 900 ₽</span> в месяц</div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="title">Аренда от 3 месяцев</div>
+                                <div class="subtitle"><span class="uk-text-bold">2 400 ₽</span> в месяц</div>
+                            </div>
                         </div>
-                        <div class="right-block uk-flex uk-flex-bottom">в месяц</div>
+                        <div class="right-block" uk-toggle="target: #v-1-p-w; mode: hover">
+                            <a href="#"><svg width="100%" height="100%" style="display:block;" viewBox="0 0 25 25"><g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd"><g><path d="M13,10 L13,18" stroke="#000000" stroke-linejoin="bevel"></path><circle fill="#000000" cx="13" cy="7.0" r="1.3"></circle></g></g></svg></a>
+                        </div>
+                        <div class="price-window" id="v-1-p-w" hidden>
+                            <span class="uk-text-bold">При оплате:</span>
+                            <br>
+                            за 1 месяц — 2900 ₽/месяц
+                            <br>
+                            за 2 месяца — 2700 ₽/месяц
+                            <br>
+                            за 3 месяца и далее — 2400 ₽/месяц
+                        </div>
                     </div>
                     <div class="bonus">
-                        <span class="uk-text-bold">+400₽</span> тариф <a>"Защита" <img src="./assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
+                        <span class="uk-text-bold">+400₽</span> тариф <a href="#" uk-toggle="target: #def-modal-window">"Защита" <img src="../assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
                     </div>
                     <div class="btn-block">
-                        <a class="btn uk-flex uk-flex-middle uk-flex-center" href="https://lk.moydevice.ru/?city=1023&device=125921&roistat_visit=570344&_ga=2.61045868.195545559.1634041555-424720027.1634041555">Выбрать модель</a>
+                        <a class="btn uk-flex uk-flex-middle uk-flex-center" href="https://lk.moydevice.ru/?city=1023&device=125921&roistat_visit=570344&_ga=2.61045868.195545559.1634041555-424720027.1634041555" uk-toggle="target: #choose-device">Выбрать модель</a>
                     </div>
                 </div>
                 <div class="uk-card">
@@ -169,21 +186,39 @@
                     <div class="subtitle">Forward SPORTING 29 X или аналог</div>
                     <div class="price-block">
                         <div class="left-block">
-                            <div class="top-price top-price-tw">2 900 ₽</div>
+                            <div class="top-block">
+                                <div class="title">Аренда на 1 месяц</div>
+                                <div class="subtitle"><span class="uk-text-bold">3 600 ₽</span> в месяц</div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="title">Аренда от 3 месяцев</div>
+                                <div class="subtitle"><span class="uk-text-bold">2 900 ₽</span> в месяц</div>
+                            </div>
                         </div>
-                        <div class="right-block uk-flex uk-flex-middle">в месяц</div>
+                        <div class="right-block" uk-toggle="target: #v-2-p-w; mode: hover">
+                            <a href="#"><svg width="100%" height="100%" style="display:block;" viewBox="0 0 25 25"><g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd"><g><path d="M13,10 L13,18" stroke="#000000" stroke-linejoin="bevel"></path><circle fill="#000000" cx="13" cy="7.0" r="1.3"></circle></g></g></svg></a>
+                        </div>
+                        <div class="price-window" id="v-2-p-w" hidden>
+                            <span class="uk-text-bold">При оплате:</span>
+                            <br>
+                            за 1 месяц — 3600 ₽/месяц
+                            <br>
+                            за 2 месяца — 3300 ₽/месяц
+                            <br>
+                            за 3 месяца и далее — 2900 ₽/месяц
+                        </div>
                     </div>
                     <div class="bonus">
-                        <span class="uk-text-bold">+400₽</span> тариф <a>"Защита" <img src="./assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
+                        <span class="uk-text-bold">+400₽</span> тариф <a href="#" uk-toggle="target: #def-modal-window">"Защита" <img src="../assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
                     </div>
                     <div class="btn-block">
-                        <a class="btn uk-flex uk-flex-middle uk-flex-center" href="https://lk.moydevice.ru/?city=1023&device=125921&roistat_visit=570344&_ga=2.61045868.195545559.1634041555-424720027.1634041555">Выбрать модель</a>
+                        <a class="btn uk-flex uk-flex-middle uk-flex-center" href="https://lk.moydevice.ru/?city=1023&device=125921&roistat_visit=570344&_ga=2.61045868.195545559.1634041555-424720027.1634041555" uk-toggle="target: #choose-device">Выбрать модель</a>
                     </div>
                 </div>
             </div>
             <div class="choosemodel-title choosemodel-title-second uk-text-center uk-width-1-2">А еще у нас есть самокаты</div>
             <div class="uk-flex uk-flex-row uk-flex-between uk-margin-top uk-margin-bottom cards-block s-cards-block">
-                <div class="uk-card">
+                <div class="uk-card s-card">
                     <div class="img-block img-block-s">
                         <img src="./assets/icons/device/cards/1.png" alt="">
                         <div class="uk-position-top-right allphoto-link"><a uk-toggle="target: #s-1-photo"><img src="./assets/icons/icon/choosemodel/Group_11.png" alt=""></a></div>
@@ -191,20 +226,37 @@
                     <div class="title">Yamato 0809</div>
                     <div class="price-block">
                         <div class="left-block">
-                            <div class="top-price">2 900 ₽</div>
-                            <div class="bottom-price sell-cost">3 600 ₽</div>
+                            <div class="top-block">
+                                <div class="title">Аренда на 1 месяц</div>
+                                <div class="subtitle"><span class="uk-text-bold">4 300 ₽</span> в месяц</div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="title">Аренда от 3 месяцев</div>
+                                <div class="subtitle"><span class="uk-text-bold">3 500 ₽</span> в месяц</div>
+                            </div>
                         </div>
-                        <div class="right-block uk-flex uk-flex-bottom">в месяц</div>
+                        <div class="right-block" uk-toggle="target: #s-1-p-w; mode: hover">
+                            <a href="#"><svg width="100%" height="100%" style="display:block;" viewBox="0 0 25 25"><g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd"><g><path d="M13,10 L13,18" stroke="#000000" stroke-linejoin="bevel"></path><circle fill="#000000" cx="13" cy="7.0" r="1.3"></circle></g></g></svg></a>
+                        </div>
+                        <div class="price-window" id="s-1-p-w" hidden>
+                            <span class="uk-text-bold">При оплате:</span>
+                            <br>
+                            за 1 месяц — 2900 ₽/месяц
+                            <br>
+                            за 2 месяца — 2700 ₽/месяц
+                            <br>
+                            за 3 месяца и далее — 2400 ₽/месяц
+                        </div>
                     </div>
                     <div class="bonus">
-                        <span class="uk-text-bold">+400₽</span> тариф <a>"Защита" <img src="./assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
+                        <span class="uk-text-bold">+400₽</span> тариф <a href="#" uk-toggle="target: #def-modal-window">"Защита" <img src="../assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
                     </div>
                     <div class="btns-block">
-                        <a href="https://lk.moydevice.ru/?city=1023&device=1041&roistat_visit=485916" class="btn uk-flex uk-flex-middle uk-flex-center uk-border-pill uk-margin-top uk-margin-auto">Оформить подписку</a>
+                        <a href="https://lk.moydevice.ru/?city=1023&device=1041&roistat_visit=485916" class="btn uk-flex uk-flex-middle uk-flex-center uk-border-pill uk-margin-top uk-margin-auto" uk-toggle="target: #choose-device">Оформить подписку</a>
                         <button class="scnd-btn uk-border-pill uk-margin-top uk-margin-auto" uk-toggle="target: #s-1-charact">Характеристики</button>
                     </div>
                 </div>
-                <div class="uk-card">
+                <div class="uk-card s-card">
                     <div class="img-block img-block-s">
                         <img src="./assets/icons/device/cards/2.png" alt="">
                         <div class="uk-position-top-right allphoto-link"><a uk-toggle="target: #s-2-photo"><img src="./assets/icons/icon/choosemodel/Group_11.png" alt=""></a></div>
@@ -212,16 +264,33 @@
                     <div class="title">Aovo 365M Pro</div>
                     <div class="price-block">
                         <div class="left-block">
-                            <div class="top-price">3 900 ₽</div>
-                            <div class="bottom-price sell-cost">4 300 ₽</div>
+                            <div class="top-block">
+                                <div class="title">Аренда на 1 месяц</div>
+                                <div class="subtitle"><span class="uk-text-bold">4 300 ₽</span> в месяц</div>
+                            </div>
+                            <div class="bottom-block">
+                                <div class="title">Аренда от 3 месяцев</div>
+                                <div class="subtitle"><span class="uk-text-bold">3 500 ₽</span> в месяц</div>
+                            </div>
                         </div>
-                        <div class="right-block uk-flex uk-flex-bottom">в месяц</div>
+                        <div class="right-block" uk-toggle="target: #s-2-p-w; mode: hover">
+                            <a href="#"><svg width="100%" height="100%" style="display:block;" viewBox="0 0 25 25"><g stroke="none" stroke-width="1.5" fill="none" fill-rule="evenodd"><g><path d="M13,10 L13,18" stroke="#000000" stroke-linejoin="bevel"></path><circle fill="#000000" cx="13" cy="7.0" r="1.3"></circle></g></g></svg></a>
+                        </div>
+                        <div class="price-window" id="s-2-p-w" hidden>
+                            <span class="uk-text-bold">При оплате:</span>
+                            <br>
+                            за 1 месяц — 3900 ₽/месяц
+                            <br>
+                            за 2 месяца — 3500 ₽/месяц
+                            <br>
+                            за 3 месяца и далее — 3300 ₽/месяц
+                        </div>
                     </div>
                     <div class="bonus">
-                        <span class="uk-text-bold">+400₽</span> тариф <a>"Защита" <img src="./assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
+                        <span class="uk-text-bold">+400₽</span> тариф <a href="#" uk-toggle="target: #def-modal-window" >"Защита" <img src="../assets/icons/icon/choosemodel/kisspng.png" alt=""></a>
                     </div>
                     <div class="btns-block">
-                        <a href="https://lk.moydevice.ru/?city=1023&device=1041&roistat_visit=485916" class="btn uk-flex uk-flex-middle uk-flex-center uk-border-pill uk-margin-top uk-margin-auto">Оформить подписку</a>
+                        <a href="https://lk.moydevice.ru/?city=1023&device=1041&roistat_visit=485916" class="btn uk-flex uk-flex-middle uk-flex-center uk-border-pill uk-margin-top uk-margin-auto" uk-toggle="target: #choose-device">Оформить подписку</a>
                         <button class="scnd-btn uk-border-pill uk-margin-top uk-margin-auto" uk-toggle="target: #s-1-charact">Характеристики</button>
                     </div>
                 </div>
@@ -234,21 +303,24 @@
     
                     <ul class="uk-slideshow-items modal-slider">
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-1/1.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-1/1.png" alt="" uk-cover>
                         </li>
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-1/2.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-1/2.png" alt="" uk-cover>
                         </li>
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-1/3.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-1/3.jpg" alt="" uk-cover>
                         </li>
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-1/4.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-1/4.png" alt="" uk-cover>
+                        </li>
+                        <li>
+                            <img src="./assets/icons/device/modal/s-1/5.png" alt="" uk-cover>
                         </li>
                     </ul>
                 
-                    <a class="left-modal-arrow" href="#"  uk-slideshow-item="previous"><img width="30" height="30" src="./assets/img/icons/services/left-arrow.svg" alt=""></a>
-                    <a class="right-modal-arrow" href="#"  uk-slideshow-item="next"><img width="30" height="30" src="./assets/img/icons/services/right-arrow.svg" alt=""></a>
+                    <a class="left-modal-arrow" href="#"  uk-slideshow-item="previous"><img width="30" height="30" src="./assets/icons/icon/modal/left-arrow.svg" alt=""></a>
+                    <a class="right-modal-arrow" href="#"  uk-slideshow-item="next"><img width="30" height="30" src="./assets/icons/icon/modal/right-arrow.svg" alt=""></a>
                 
                 </div>
             </div>
@@ -301,18 +373,21 @@
     
                     <ul class="uk-slideshow-items modal-slider">
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-2/1.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-2/1.jpg" alt="" uk-cover>
                         </li>
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-2/2.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-2/2.jpg" alt="" uk-cover>
                         </li>
                         <li>
-                            <img src="./assets/img/icons/modal/samokat-2/3.png" alt="" uk-cover>
+                            <img src="./assets/icons/device/modal/s-2/3.png" alt="" uk-cover>
+                        </li>
+                        <li>
+                            <img src="./assets/icons/device/modal/s-2/4.png" alt="" uk-cover>
                         </li>
                     </ul>
                 
-                    <a class="left-modal-arrow" href="#"  uk-slideshow-item="previous"><img width="30" height="30" src="./assets/img/icons/services/left-arrow.svg" alt=""></a>
-                    <a class="right-modal-arrow" href="#"  uk-slideshow-item="next"><img width="30" height="30" src="./assets/img/icons/services/right-arrow.svg" alt=""></a>
+                    <a class="left-modal-arrow" href="#"  uk-slideshow-item="previous"><img width="30" height="30" src="./assets/icons/icon/modal/left-arrow.svg" alt=""></a>
+                    <a class="right-modal-arrow" href="#"  uk-slideshow-item="next"><img width="30" height="30" src="./assets/icons/icon/modal/right-arrow.svg" alt=""></a>
                 
                 </div>
             </div>
@@ -359,6 +434,83 @@
             </div>
         </div>
     </div>
+    <div id="choose-device" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="form-title">Оформить подписку</div>
+            <form action="#">
+                <div class="name-field"><input type="text" name="name-field" id="name-field" placeholder="Ваше имя"></div>
+                <div class="tel-field">
+                    <div class="select-country">
+                        <div class="choosen-country" uk-toggle="target: #country-list-block" >
+                            <img src="./assets/icons/countries/ru.png" alt="flag-img" class="choosen-country-flag-img">
+                            <img src="./assets/icons/icon/down-arrow.png" alt="arrow-icon" class="choosen-country-arrow-img">
+                        </div>
+                        <div class="country-list" id="country-list-block" hidden>
+                            <ul class="country-list-ul"></ul>
+                        </div>
+                    </div>
+                    <label for="telephone" class="label-4-tel">+7</label>
+                    <input type="tel" name="telephone" id="telephone-select" placeholder="Номер телефона">
+                </div>
+                <div class="choosedevice-field">
+                    <div class="choosedevice-field-title">Девайсы</div>
+                    <div class="select-block">
+                        <select name="samokat"> 
+                            <option value="Велосипед Forward Sporting 29L(от 2400 ₽/месяц)">Велосипед Forward Sporting 29L(от 2400 ₽/месяц)</option> 
+                            <option value="Велосипед Forward Sporting 29X (от 2900 ₽/месяц)">Велосипед Forward Sporting 29X (от 2900 ₽/месяц)</option> 
+                            <option value="Самокат Yamato 0809 (от 2400 ₽/месяц)">Самокат Yamato 0809 (от 2400 ₽/месяц)</option> 
+                            <option value="Самокат Aovo 365M Pro (от 3300 ₽/месяц)">Самокат Aovo 365M Pro (от 3300 ₽/месяц)</option>
+                            <option value="Нужна консультация по выбору девайса (бесплатно)">Нужна консультация по выбору девайса (бесплатно)</option> 
+                        </select>
+                    </div>
+                </div>
+                <div class="promocode-field">
+                    <div class="promocode-field-title">Введите промокод (если есть)</div>
+                    <div class="input-block">
+                        <input type="text" name="promocode" id="promocode">
+                    </div>
+                </div>
+                <div class="deliveryoption-field">
+                    <div class="deliveryoption-field-title">Способ получения</div>
+                    <div class="select-block">
+                        <select name="sposob_polucheniya"> 
+                            <option value="Самовывоз (Бесплатно)">Самовывоз (Бесплатно)</option> 
+                            <option value="Доставка курьером (Бесплатно)">Доставка курьером (Бесплатно)</option> 
+                        </select>
+                    </div>
+                </div>
+                <div class="contact-field">
+                    <div class="contact-field-title">Удобный способ связи</div>
+                    <div class="select-block">
+                        <select name="sposobsvyasi"> 
+                            <option value="Звонок">Звонок</option> 
+                            <option value="WhatsApp">WhatsApp</option> 
+                        </select>
+                    </div>
+                </div>
+                <div class="submit">
+                    <button type="submit">Оформить</button>
+                </div>
+                <div class="policy-subtext-field">
+                    Нажимая кнопку "Оформить", вы соглашаетесь с <a href="#">политикой обработки персональных данных</a>.
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="def-modal-window" class="uk-flex-top" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+    
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div class="container">
+                <ul>
+                    <li>Полное покрытие ответственности при поломках или повреждениях девайса</li>
+                    <li>50% покрытие ответственности при краже девайса</li>
+                </ul>
+                Более подробно см.<a href="https://www.moydevice.ru/oferta?roistat_visit=609447">оферту</a>
+            </div>
+        </div>
+    </div>
 </div>
         <div class="subbenefit-block">
     <div class="uk-container">
@@ -368,26 +520,26 @@
         </div>
         <div class="content-block">
             <div class="uk-card">
-                <div class="left-block"><img src="./assets/icons/icon/banner/plus_1.png" alt=""></div>
+                <div class="left-block"><img src="../assets/icons/icon/banner/plus_1.png" alt=""></div>
                 <div class="right-block">Цена фиксирована.<br> Без доплат и неожиданных списаний.</div>
             </div>
             <div class="uk-card">
-                <div class="left-block"><img src="./assets/icons/icon/banner/plus_1.png" alt=""></div>
+                <div class="left-block"><img src="../assets/icons/icon/banner/plus_1.png" alt=""></div>
                 <div class="right-block">Это твой велосипед — можешь взять его на дачу или кататься ночи напролет.</div>
             </div>
             <div class="uk-card">
-                <div class="left-block"><img src="./assets/icons/icon/banner/plus_1.png" alt=""></div>
+                <div class="left-block"><img src="../assets/icons/icon/banner/plus_1.png" alt=""></div>
                 <div class="right-block">Тебе не нужно искать станцию, <br> чтобы взять и вернуть велосипед.</div>
             </div>
             <div class="uk-card">
-                <div class="left-block"><img src="./assets/icons/icon/banner/plus_1.png" alt=""></div>
+                <div class="left-block"><img src="../assets/icons/icon/banner/plus_1.png" alt=""></div>
                 <div class="right-block">При частом использовании — <br> до <strong>70% дешевле</strong></div>
             </div>
         </div>
     </div>
 </div>
-        <div class="subinfo-block uk-section">
-    <h2 class="uk-text-lead uk-text-center uk-text-bold uk-margin-medium-bottom" style="font-size: 36px;">Почему подписка это удобно?</h2>
+        <div class="subinfo-block uk-section" id="subinfo-block">
+    <div class="subinfo-title uk-text-center uk-text-bold uk-margin-medium-bottom">Почему подписка это удобно?</div>
     <div class="table-container uk-container uk-padding-remove">
         <table class="uk-table">
             <thead>
@@ -403,7 +555,7 @@
                 <tr>
                     <td></td>
                     <td class="uk-flex uk-flex-center">
-                        <a class="uk-button uk-button-primary uk-border-pill uk-margin-auto uk-text-uppercase uk-text-bold">получить</a>
+                        <a href="#choosemodel" class="uk-button uk-button-primary uk-border-pill uk-margin-auto uk-text-uppercase uk-text-bold">получить</a>
                     </td>
                     <td></td>
                     <td></td>
@@ -411,46 +563,46 @@
             </tfoot>
             <tbody>
                 <tr>
-                    <td class="text-sub uk-text-center">Без залога</td>
+                    <td class="text-sub">Без залога</td>
                     <td class="text-sub uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                     <td class="text-sub uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                     <td class="text-sub uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="text-sub uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="text-sub uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="text-sub uk-text-center">Без забот по обслуживанию и ремонту</td>
+                    <td class="text-sub">Без забот по обслуживанию и ремонту</td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="text-sub uk-text-center">Можно вернуть велосипед, если не нужен</td>
+                    <td class="text-sub">Можно вернуть велосипед, если не нужен</td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="text-sub uk-text-center">Небольшие первоначальные вложения</td>
+                    <td class="text-sub">Небольшие первоначальные вложения</td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="text-sub uk-text-center">Доступность во всех районах города</td>
+                    <td class="text-sub">Доступность во всех районах города</td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-plus.svg" alt=""></td>
                 </tr>
                 <tr>
-                    <td class="text-sub uk-text-center">Хорошее состояние и чистота велосипеда</td>
+                    <td class="text-sub">Хорошее состояние и чистота велосипеда</td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
                     <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-plus.svg" alt=""></td>
-                    <td class="uk-text-center"><img src="./assets/icons/icon/banner/ye-minus.svg" alt=""></td>
+                    <td class="uk-text-center"><img src="../assets/icons/icon/banner/ye-minus.svg" alt=""></td>
                 </tr>
             </tbody>
         </table>
@@ -471,11 +623,11 @@
         </div>
     </div>
 </div>
-        <div class="howitwork-block">
+        <div class="howitwork-block" id="howitwork-block">
     <div class="uk-container uk-flex uk-flex-column">
         <div class="top-block uk-flex uk-flex-row uk-flex-between">
             <div class="uk-card uk-flex uk-flex-column">
-                <div class="img img-frst"><img src="./assets/icons/icon/workinfo/truck_2_1.png" alt=""></div>
+                <div class="img img-frst"><img src="../assets/icons/icon/workinfo/truck_2_1.png" alt=""></div>
                 <div class="title title-frst">Доставка</div>
                 <div class="card card-top">
                     <div class="text">
@@ -487,7 +639,7 @@
                 </div>
             </div>
             <div class="uk-card uk-flex uk-flex-column">
-                <div class="img img-scnd"><img src="./assets/icons/icon/workinfo/return_1.png" alt=""></div>
+                <div class="img img-scnd"><img src="../assets/icons/icon/workinfo/return_1.png" alt=""></div>
                 <div class="title title-scnd">Замена и возврат</div>
                 <div class="card card-bottom">
                     <div class="text">
@@ -500,7 +652,7 @@
         </div>
         <div class="bottom-block uk-flex uk-flex-column uk-margin-medium-top">
             <div class="uk-card uk-flex uk-flex-column">
-                <div class="img img-thrd"><img src="./assets/icons/icon/howitwork/place.png" alt=""></div>
+                <div class="img img-thrd"><img src="../assets/icons/icon/howitwork/place.png" alt=""></div>
                 <div class="title title-thrd">Самовывоз бесплатно</div>
                 <div class="text-block uk-text-nowrap">
                     Ты также можешь сам приехать в офис для получения, замены или возврата тренажера. 
@@ -510,7 +662,7 @@
         </div>
     </div>
 </div>
-        <div class="testdrive-block">
+        <div class="testdrive-block" id="testdrive-block">
     <div class="uk-container uk-flex uk-flex-column">
         <div class="container uk-flex uk-flex-row uk-child-width-1-2@m uk-child-width-1-1 uk-margin-large-bottom">
             <div class="card uk-flex uk-flex-column">
@@ -553,11 +705,11 @@
         <div class="subtitle">
             Копи впечатления, а не вещи.
         </div>
-        <a href="#" class="btn uk-flex uk-flex-middle uk-flex-center">Получить велосипед</a>
+        <a href="#choosemodel" class="btn uk-flex uk-flex-middle uk-flex-center">Получить велосипед</a>
     </div>
     <div class="ye-circle"></div>
 </div>
-        <div class="forcourier-block">
+        <div class="forcourier-block" id="forcourier-block">
     <div class="uk-container">
         <div class="forcourier-title">
             Ищешь транспорт для работы курьером или бизнеса?
@@ -611,7 +763,7 @@
         <div class="subtitle text-white uk-text-center uk-width-1-2@m uk-width-2-3 uk-margin-top uk-margin-auto">
             Мой велик - проект сервиса "Мой девайс", первого в России сервиса аренды девайсов по системе подписки. Зачем покупать? Плати только тогда, когда пользуешься.
         </div>
-        <a href="#" class="btn uk-flex uk-flex-middle uk-flex-center uk-margin-top uk-text-uppercase">Узнать подробнее</a>
+        <a href="https://www.moydevice.ru/?roistat_visit=609447" class="btn uk-flex uk-flex-middle uk-flex-center uk-margin-top uk-text-uppercase">Узнать подробнее</a>
     </div>
     <div class="yellow-circle-s"></div>
     <div class="yellow-circle-m"></div>
@@ -699,7 +851,7 @@
         <a href="https://www.moyvelik.ru/pdd_velik" class="uk-flex uk-flex-middle uk-flex-center">Подробнее</a>
     </div>
 </div>
-        <div class="questions-block uk-section">
+        <div class="questions-block uk-section" id="questions-block">
     <h2 class="uk-text-bold uk-text-lead uk-text-center uk-margin-large-top uk-margin-large-bottom q-title">
         Вопросы и ответы
     </h2>
@@ -975,9 +1127,9 @@
                     </div>
                     <div class="links-block">
                         <div class="links">
-                            <a href="#"><img src="./assets/icons/icon/footer/instagram.svg" alt=""></a>
-                            <a href="#"><img src="./assets/icons/icon/footer/telegram.svg" alt=""></a>
-                            <a href="#"><img src="./assets/icons/icon/footer/whatsapp.svg" alt=""></a>
+                            <a href="https://www.instagram.com/moydevice/"><img src="./assets/icons/icon/footer/instagram.svg" alt=""></a>
+                            <a href="https://t.me/moysamokatbot"><img src="./assets/icons/icon/footer/telegram.svg" alt=""></a>
+                            <a href="https://api.whatsapp.com/send/?phone=%2B79854614241&text=%D0%95%D1%81%D1%82%D1%8C+%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81+%D0%BF%D0%BE+%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D0%BA%D0%B5+%22%D0%9C%D0%BE%D0%B9+%D0%B2%D0%B5%D0%BB%D0%B8%D0%BA%22.+%D0%AF+%D0%B8%D0%B7+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D1%8B&app_absent=0"><img src="./assets/icons/icon/footer/whatsapp.svg" alt=""></a>
                         </div>
                         <div class="address">115114 г. Москва, 1-й <br> Кожевнический пер., д. 6, стр. 6</div>
                     </div>
